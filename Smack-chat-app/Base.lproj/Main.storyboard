@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="tWp-1m-Hip" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="wL1-ch-h3u"/>
+                        <segue destination="30T-lO-wH9" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="AeT-gR-hKg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="7" y="-147"/>
+        </scene>
+        <!--ChannelVC-->
+        <scene sceneID="F8K-Hw-4JU">
+            <objects>
+                <viewController id="tWp-1m-Hip" customClass="ChannelVC" customModule="Smack_chat_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HAT-Ll-Fsa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="F15-lX-2nQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObC-QQ-fRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="825" y="-412"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="kw9-rw-K4U">
+            <objects>
+                <viewController id="30T-lO-wH9" customClass="ChatVC" customModule="Smack_chat_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Zw-tO-1jo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsU-cX-yGz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzj-3l-NSr">
+                                        <rect key="frame" x="12" y="47" width="24" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="Jw8-3H-tCP"/>
+                                            <constraint firstAttribute="width" constant="24" id="Wb7-yG-KYT"/>
+                                        </constraints>
+                                        <state key="normal" image="smackBurger"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rEy-Z0-uxC">
+                                        <rect key="frame" x="163" y="44.5" width="49.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.30196078431372547" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="rEy-Z0-uxC" firstAttribute="centerY" secondItem="Jzj-3l-NSr" secondAttribute="centerY" id="A1j-8e-mAp"/>
+                                    <constraint firstAttribute="bottom" secondItem="Jzj-3l-NSr" secondAttribute="bottom" constant="12" id="RJo-Uq-2AB"/>
+                                    <constraint firstAttribute="height" constant="77" id="Wd7-J3-Wc4"/>
+                                    <constraint firstItem="Jzj-3l-NSr" firstAttribute="leading" secondItem="NsU-cX-yGz" secondAttribute="leading" constant="12" id="m4w-Qu-dyv"/>
+                                    <constraint firstItem="rEy-Z0-uxC" firstAttribute="centerX" secondItem="NsU-cX-yGz" secondAttribute="centerX" id="pbB-Qd-V5F"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NsU-cX-yGz" firstAttribute="trailing" secondItem="7Dd-f5-jJV" secondAttribute="trailing" id="97a-ba-uXG"/>
+                            <constraint firstItem="NsU-cX-yGz" firstAttribute="top" secondItem="6Zw-tO-1jo" secondAttribute="top" id="I5J-UN-DbD"/>
+                            <constraint firstItem="NsU-cX-yGz" firstAttribute="leading" secondItem="7Dd-f5-jJV" secondAttribute="leading" id="Yqx-h7-eFN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7Dd-f5-jJV"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuButton" destination="Jzj-3l-NSr" id="VOZ-kw-tSJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXk-9O-f6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824.79999999999995" y="319.79010494752629"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="smackBurger" width="40" height="40"/>
+    </resources>
 </document>
