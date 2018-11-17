@@ -16,6 +16,9 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var passwordText: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     
+    //Variables
+    var avatarName = "profileDefault"
+    var avatarColor = "[0.5, 0.5, 0.5, 1]"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,7 @@ class CreateAccountVC: UIViewController {
     
     @IBAction func createAccountPressed(_ sender: Any) {
         // comma here denotes "where"
+        guard let name = userNameText.text , userNameText.text != "" else { return }
         guard let email = emailText.text , emailText.text != "" else { return }
         guard let pass = passwordText.text , passwordText.text != "" else { return }
         
@@ -37,7 +41,13 @@ class CreateAccountVC: UIViewController {
             if success {
                 AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
                     if success {
-                        print("logged in user", AuthService.instance.authToken)
+                        AuthService.instance.createUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion:  { (success) in
+                            if success {
+                                print(UserDataService.instance.name, UserDataService.instance.avatarName)
+                                self.performSegue(withIdentifier: UNWIND, sender: nil)
+                            }
+                            
+                        })
                     }
                 })
             }
