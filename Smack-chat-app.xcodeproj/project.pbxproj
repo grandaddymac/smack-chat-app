@@ -17,6 +17,7 @@
 		D800D44E21A2034300E78116 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D800D44C21A2034300E78116 /* ProfileVC.xib */; };
 		D800D45121A4A65E00E78116 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800D45021A4A65E00E78116 /* MessageService.swift */; };
 		D800D45321A4A69100E78116 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800D45221A4A69100E78116 /* Channel.swift */; };
+		D800D45521A4C4D000E78116 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800D45421A4C4D000E78116 /* ChannelCell.swift */; };
 		D80DE513219DC4F60070046E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DE512219DC4F60070046E /* AppDelegate.swift */; };
 		D80DE518219DC4F60070046E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80DE516219DC4F60070046E /* Main.storyboard */; };
 		D80DE51A219DC4F70070046E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80DE519219DC4F70070046E /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		D800D44C21A2034300E78116 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		D800D45021A4A65E00E78116 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		D800D45221A4A69100E78116 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		D800D45421A4C4D000E78116 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		D80DE50F219DC4F60070046E /* Smack-chat-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smack-chat-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80DE512219DC4F60070046E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D80DE517219DC4F60070046E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				D800D441219FA93300E78116 /* RoundedButton.swift */,
 				D800D44721A1D00F00E78116 /* AvatarCell.swift */,
 				D800D44921A1DD8D00E78116 /* CircleImage.swift */,
+				D800D45421A4C4D000E78116 /* ChannelCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D800D44D21A2034300E78116 /* ProfileVC.swift in Sources */,
+				D800D45521A4C4D000E78116 /* ChannelCell.swift in Sources */,
 				D80DE52D219DC8F00070046E /* ChatVC.swift in Sources */,
 				D800D44621A1CE4700E78116 /* AvatarPickerVC.swift in Sources */,
 				D800D442219FA93300E78116 /* RoundedButton.swift in Sources */,
