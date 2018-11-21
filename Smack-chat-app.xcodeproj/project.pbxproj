@@ -22,6 +22,7 @@
 		D800D45921A4CCC800E78116 /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D800D45721A4CCC800E78116 /* AddChannelVC.xib */; };
 		D800D45B21A4D50A00E78116 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800D45A21A4D50A00E78116 /* SocketService.swift */; };
 		D800D45D21A5BE4A00E78116 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800D45C21A5BE4A00E78116 /* Message.swift */; };
+		D800D45F21A6014900E78116 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D800D45E21A6014900E78116 /* KeyboardBoundView.swift */; };
 		D80DE513219DC4F60070046E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80DE512219DC4F60070046E /* AppDelegate.swift */; };
 		D80DE518219DC4F60070046E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80DE516219DC4F60070046E /* Main.storyboard */; };
 		D80DE51A219DC4F70070046E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80DE519219DC4F70070046E /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		D800D45721A4CCC800E78116 /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		D800D45A21A4D50A00E78116 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
 		D800D45C21A5BE4A00E78116 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		D800D45E21A6014900E78116 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
 		D80DE50F219DC4F60070046E /* Smack-chat-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smack-chat-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80DE512219DC4F60070046E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D80DE517219DC4F60070046E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				D800D44721A1D00F00E78116 /* AvatarCell.swift */,
 				D800D44921A1DD8D00E78116 /* CircleImage.swift */,
 				D800D45421A4C4D000E78116 /* ChannelCell.swift */,
+				D800D45E21A6014900E78116 /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D800D45F21A6014900E78116 /* KeyboardBoundView.swift in Sources */,
 				D800D45B21A4D50A00E78116 /* SocketService.swift in Sources */,
 				D800D44D21A2034300E78116 /* ProfileVC.swift in Sources */,
 				D800D45521A4C4D000E78116 /* ChannelCell.swift in Sources */,
