@@ -18,8 +18,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var messageTextBox: UITextField!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendButton: UIButton!
-    
     @IBOutlet weak var typingUsersLabel: UILabel!
+    
     var isTyping = false
     
     override func viewDidLoad() {
