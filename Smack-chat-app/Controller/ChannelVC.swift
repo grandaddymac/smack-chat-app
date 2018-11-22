@@ -47,6 +47,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         setupUserInfo()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @IBAction func addChannelPressed(_ sender: Any) {
         if AuthService.instance.isLoggedIn {
             let addChannel = AddChannelVC()

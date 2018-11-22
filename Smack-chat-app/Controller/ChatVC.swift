@@ -86,6 +86,11 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             })
         }
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     @objc func userDataDidChange(_ notif: Notification) {
         if AuthService.instance.isLoggedIn {
             onLoginGetMessages()
